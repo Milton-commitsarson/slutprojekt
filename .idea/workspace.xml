@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0fe8162-b548-4de3-9434-544f2169b5a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stats.java" afterDir="false" />
+    <list default="true" id="c0fe8162-b548-4de3-9434-544f2169b5a4" name="Changes" comment="commit 3?">
+      <change afterPath="$PROJECT_DIR$/DubbelFake1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DubbelRiktig1-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/femfelfelNY-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HiddenObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Points.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objects.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +52,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/milton.molanderrybe/Downloads/Programmering2/slutprojekt&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,6 +61,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\milton.molanderrybe\Downloads\Programmering2\slutprojekt" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\milton.molanderrybe\Downloads\Programmering2\slutprojekt" />
       <recent name="C:\Users\milton.molanderrybe\Downloads\Programmering2\slutprojekt\src" />
@@ -91,10 +100,26 @@
       <workItem from="1711552990328" duration="646000" />
       <workItem from="1712824422814" duration="4594000" />
       <workItem from="1712916855960" duration="4780000" />
+      <workItem from="1713170669089" duration="18395000" />
+      <workItem from="1713516070063" duration="7529000" />
+      <workItem from="1714033684863" duration="3343000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 3?">
+      <option name="closed" value="true" />
+      <created>1713170953775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713170953775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit 3?" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 3?" />
   </component>
 </project>

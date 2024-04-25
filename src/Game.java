@@ -1,10 +1,6 @@
 public class Game {
-    public Game(){
-        new Window();
-        MyObject bob = new MyObject(20,20);
-    }
-
-    private void map1(){
-        MyObject bob = new MyObject(10,10);
+    public Game() {
+        Window window = new Window();
+       // Panel myPanel = window.getMyPanel();
     }
 }
