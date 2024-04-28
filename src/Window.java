@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Window extends JFrame implements KeyListener {//skapar JFrame
-    public Menu myMenu = new Menu();
+    private final Menu myMenu = new Menu();
    // public Win myWin = new Win();
 
 

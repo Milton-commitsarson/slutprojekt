@@ -70,7 +70,9 @@ public class Panel extends JPanel implements MouseListener {
                     obj.xPos + obj.getWidth() / 2 > e.getX() &&
                     obj.yPos - obj.getWidth() / 2 < e.getY() &&
                     obj.yPos + obj.getHeight() / 2 > e.getY() || obj.xPos - obj.getWidth() / 2 - 492  < e.getX() &&
-                    obj.xPos + obj.getWidth() / 2 - 492> e.getX() ) {
+                    obj.xPos + obj.getWidth() / 2 - 492> e.getX() &&
+                    obj.yPos - obj.getWidth() / 2 < e.getY() &&
+                    obj.yPos + obj.getHeight() / 2 > e.getY()  ) {
                 if (obj.isHidden) {
                     obj.isHidden = false;
                     myPoints.objFound--;// ifall objektet blir hittat så minskar detta antalet av de hittade obejekten
@@ -81,7 +83,6 @@ public class Panel extends JPanel implements MouseListener {
         System.out.println(e.getX() + " , " + e.getY());// skriver ut koordinaterna
         this.revalidate();//förnyar
         this.repaint();
-        Window.fo = myPoints.objFound;
         if (myPoints.objFound == 4){
             this.add(myWin);
             this.setVisible(true);
