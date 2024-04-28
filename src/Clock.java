@@ -5,44 +5,35 @@ import java.awt.event.ActionListener;
 
 public class Clock extends JPanel implements ActionListener {
 
-    public int minute = 0;
-    public int seconds= 0;
-    public int zero = 0;
-    Timer timer;
-    // static JLabel score;
+    public int minute = 0;//minutvisare
+    public int seconds= 0;//sekundvisare
+    Timer timer;//skapar en ny timer
 
     public Clock() {
-        setBounds(110, 590, 10, 10);
-        this.setSize(100, 15);
-        this.setVisible(true);
-        //score = new JLabel(objFound +"/" + objTotal);
-        //Points.add(score);
-        timer = new Timer(1000, this);
+        setBounds(900, 570, 70, 30);//rutans placering
+        this.setSize(70, 30);//storlek på rutan
+        timer = new Timer(1000, this);// sätter en ny klocka som tickar efter 1000 millisekunder
         timer.start();
     }
 
-    protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g) {//Ritar ut allting
         super.paintComponent(g);
-        setBackground(Color.CYAN);
-        g.setFont(Font.getFont("Ariel"));
+        setBackground(Color.yellow);//bakrundsfärg
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); // font och storlek
         //return Points(objTotal)
-        if (seconds > 9){
-            g.drawString(zero + minute+ " : " +seconds, 10, 10);
+        if (seconds > 9){// gör så att det är en nolla framför sekund räknaren tills att det har gått 10 sekunder
+            g.drawString( minute+ " : " +seconds, 10, 20);
         }else {
-            g.drawString(zero + minute+ " : " + zero +seconds, 10, 10);
+            g.drawString(  minute+ " : " + 0 +seconds, 10, 20);
         }
-        this.revalidate();
+        this.revalidate();//förnyar
         this.repaint();
-
-
-        //g.drawRect(0, 0, 10, 10);
-
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        seconds++;
-        if (seconds == 60){
+    public void actionPerformed(ActionEvent e) {//
+        seconds++;//att klcokan ökas
+        if (seconds == 60){// att sekundvisaren nollställs efter 60 sekunder och att minutvisaren ökas
             seconds = 0;
             minute++;
         }

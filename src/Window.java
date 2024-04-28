@@ -1,40 +1,50 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
-public class Window extends JFrame
-{
-    public Points myPoints = new Points();
-    public Panel myPanel = new Panel(myPoints);
-    public Clock myClock = new Clock();
-   // Timer timer;
+public class Window extends JFrame implements KeyListener {//skapar JFrame
+    public Menu myMenu = new Menu();
+   // public Win myWin = new Win();
+
+
 
     public Window() {
-        //this.addMouseListener(this);
-        this.setBounds(0, 0, 1000, 650);
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setBounds(0, 0, 1000, 650);//storlek på JFrame
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//Stänger ner när krysset klickas
         this.setLayout(null);
-        this.add(myPanel);
-        this.add(myPoints);
-        this.add(myClock);
-        this.setVisible(true);
-        //timer = new Timer(1000, this);
-        //timer.start();
+        this.add(myMenu);//lägger till menyn
+        this.addKeyListener(this);//Lägger till tangetklick metoden
+        this.setVisible(true);// gör alltiing snyligt
+       /* if(myPoints{
+            //  this.add(myWin);
+            System.out.println("bbd");
+        }*/
+
+       //Points.clear;
+       //if (myPoints.clear == false){
+        //System.out.println("jgionfiosnfoisn");
+       //}
+
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
 
     }
 
-    public Points getMyPoints() {
-        return myPoints;
+    @Override
+    public void keyPressed(KeyEvent e) {
+
     }
 
-    public Panel getMyPanel() {
-        return myPanel;
+    @Override
+    public void keyReleased(KeyEvent e) {
+        Points myPoints = new Points();//skapar nya varsioner av klasserna
+        Panel myPanel = new Panel(myPoints);
+        Clock myClock = new Clock();
+        if (e.getKeyCode() == KeyEvent.VK_SPACE){// om space tangenten är klickad
+            myMenu.setVisible(false);//gömmer menyn
+            this.add(myPanel);// visar de andra klasserna
+            this.add(myPoints);
+            this.add(myClock);
+        }
     }
-
-    /*@Override
-    public void actionPerformed(ActionEvent e) {
-
-    }*/
 }

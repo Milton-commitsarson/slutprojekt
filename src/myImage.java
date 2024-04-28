@@ -1,5 +1,5 @@
-public class myImage {
-    private String filename;
+public class myImage {//lagar ett filnamn
+    private final String filename;
 
     public myImage(String filename) {
         this.filename = filename;
