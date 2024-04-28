@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 
 public class Clock extends JPanel implements ActionListener {
 
-    public int minute = 0;//minutvisare
-    public int seconds= 0;//sekundvisare
+    private int minute = 0;//minutvisare
+    private int seconds= 0;//sekundvisare
     Timer timer;//skapar en ny timer
 
     public Clock() {

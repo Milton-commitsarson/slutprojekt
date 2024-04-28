@@ -3,9 +3,6 @@ import java.awt.event.*;
 
 public class Window extends JFrame implements KeyListener {//skapar JFrame
     private final Menu myMenu = new Menu();
-   // public Win myWin = new Win();
-
-
 
     public Window() {
         this.setBounds(0, 0, 1000, 650);//storlek på JFrame
@@ -14,16 +11,6 @@ public class Window extends JFrame implements KeyListener {//skapar JFrame
         this.add(myMenu);//lägger till menyn
         this.addKeyListener(this);//Lägger till tangetklick metoden
         this.setVisible(true);// gör alltiing snyligt
-       /* if(myPoints{
-            //  this.add(myWin);
-            System.out.println("bbd");
-        }*/
-
-       //Points.clear;
-       //if (myPoints.clear == false){
-        //System.out.println("jgionfiosnfoisn");
-       //}
-
     }
     @Override
     public void keyTyped(KeyEvent e) {

@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Panel extends JPanel implements MouseListener {
@@ -34,8 +35,7 @@ public class Panel extends JPanel implements MouseListener {
         hiddenObjects.add(new HiddenObject(907 , 363));
 
         myPoints.objTotal = hiddenObjects.size();//antalet objekt
-        myPoints.objFound = myPoints.objTotal;
-        System.out.println(myPoints.objFound);
+        myPoints.objLeft = myPoints.objTotal;
 
     }
 
@@ -60,33 +60,33 @@ public class Panel extends JPanel implements MouseListener {
         }
 
     }
-    public Win myWin = new Win();
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        //ObjList.add(new MyObject(e.getX(), e.getY()));
+        boolean foundObject = false;
         for (HiddenObject obj : hiddenObjects) {// kontrolerar ifall musen klickar inom korrdinaterna av lådan till ett gömt objekt, både på vänstra och höger bild
             if (obj.xPos - obj.getWidth() / 2 < e.getX() &&
                     obj.xPos + obj.getWidth() / 2 > e.getX() &&
                     obj.yPos - obj.getWidth() / 2 < e.getY() &&
                     obj.yPos + obj.getHeight() / 2 > e.getY() || obj.xPos - obj.getWidth() / 2 - 492  < e.getX() &&
-                    obj.xPos + obj.getWidth() / 2 - 492> e.getX() &&
-                    obj.yPos - obj.getWidth() / 2 < e.getY() &&
-                    obj.yPos + obj.getHeight() / 2 > e.getY()  ) {
+                    obj.xPos + obj.getWidth() / 2 - 492> e.getX() ) {
                 if (obj.isHidden) {
                     obj.isHidden = false;
-                    myPoints.objFound--;// ifall objektet blir hittat så minskar detta antalet av de hittade obejekten
+                    foundObject = true;
+                    myPoints.objLeft--;// ifall objektet blir hittat så minskar detta antalet av de hittade obejekten
 
                 }
             }
         }
-        System.out.println(e.getX() + " , " + e.getY());// skriver ut koordinaterna
+        if(!foundObject){
+            System.out.println("You clicked wrong loooser");
+        }
+        //System.out.println(e.getX() + " , " + e.getY());// skriver ut koordinaterna
         this.revalidate();//förnyar
         this.repaint();
-        if (myPoints.objFound == 4){
-            this.add(myWin);
-            this.setVisible(true);
-        }
+
+
+
 
     }
 
