@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        Window window = new Window();//skaper ett nytt spel
+       new Window();//skaper ett nytt spel
     }
 }

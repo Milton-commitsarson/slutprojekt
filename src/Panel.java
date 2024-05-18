@@ -10,9 +10,10 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Panel extends JPanel implements MouseListener {
-    private final myImage myImage = new myImage("DubbelRiktig1-1.png");//Hämtar bilden
+    private final myImage myImage = new myImage("beach-7732259_1280.jpg");//Hämtar bilden
+   // private final myImage myImage = new myImage("DubbelRiktig1-1.png");//Hämtar bilden
     private final Points myPoints;// skapar klassen points i Panel
-
+   // public int f=1;
     ArrayList<HiddenObject> hiddenObjects = new ArrayList<>();//listan som inehåller alla gömda obejkt
 
 
@@ -22,8 +23,9 @@ public class Panel extends JPanel implements MouseListener {
         this.myPoints = myPoints;
         this.addMouseListener(this);
         this.setBackground(Color.BLACK);
-        this.setSize(1000, 1000);//storlek på Panelen
+        this.setSize(1000, 550);//storlek på Panelen
 
+        //getWindow();
 
         this.setVisible(true);
 
@@ -37,14 +39,23 @@ public class Panel extends JPanel implements MouseListener {
         myPoints.objTotal = hiddenObjects.size();//antalet objekt
         myPoints.objLeft = myPoints.objTotal;
 
+
     }
+
+    /*private Window getWindow() {
+        if (f == 1){
+            getWindow().lvlCleard = true;
+
+        }
+        return getWindow();
+    }*/
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         BufferedImage image;
         try {
             image = ImageIO.read(new File(myImage.getFilename()));// läser in bilden
-            g.drawImage(image, 0, 0, 1000, 550, this);//Ritat ut bilden
+            g.drawImage(image, 0, 0, 500    , 550, this);//Ritat ut bilden
         } catch (IOException e) {
             System.out.println("error");// ifall det inte går att rita ut bilden
         }
@@ -69,7 +80,9 @@ public class Panel extends JPanel implements MouseListener {
                     obj.xPos + obj.getWidth() / 2 > e.getX() &&
                     obj.yPos - obj.getWidth() / 2 < e.getY() &&
                     obj.yPos + obj.getHeight() / 2 > e.getY() || obj.xPos - obj.getWidth() / 2 - 492  < e.getX() &&
-                    obj.xPos + obj.getWidth() / 2 - 492> e.getX() ) {
+                    obj.xPos + obj.getWidth() / 2 - 492> e.getX()  &&
+                    obj.yPos - obj.getWidth() / 2 < e.getY() &&
+                    obj.yPos + obj.getHeight() / 2 > e.getY() ) {
                 if (obj.isHidden) {
                     obj.isHidden = false;
                     foundObject = true;
@@ -78,8 +91,14 @@ public class Panel extends JPanel implements MouseListener {
                 }
             }
         }
+
         if(!foundObject){
             System.out.println("You clicked wrong loooser");
+
+
+        }
+        if(myPoints.objLeft == 5){
+            Window.setAwesome(true);
         }
         //System.out.println(e.getX() + " , " + e.getY());// skriver ut koordinaterna
         this.revalidate();//förnyar
@@ -87,8 +106,16 @@ public class Panel extends JPanel implements MouseListener {
 
 
 
-
     }
+
+    public void reset(){
+        myPoints.objLeft = myPoints.objTotal;
+
+        for (HiddenObject hiddenObject : hiddenObjects) {
+            hiddenObject.isHidden = true;
+        }
+    }
+
 
     @Override
     public void mousePressed(MouseEvent e) {

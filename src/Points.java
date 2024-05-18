@@ -19,4 +19,8 @@ public class Points extends JPanel { //en Panel i JFrame som håller koll på po
         this.revalidate();
         this.repaint();
     }
+
+    public void reset() {
+        objLeft = objTotal;
+    }
 }
