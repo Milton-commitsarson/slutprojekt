@@ -10,52 +10,63 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Panel extends JPanel implements MouseListener {
-    private final myImage myImage = new myImage("beach-7732259_1280.jpg");//Hämtar bilden
-   // private final myImage myImage = new myImage("DubbelRiktig1-1.png");//Hämtar bilden
+    private WrongClicked wrongClicked;
     private final Points myPoints;// skapar klassen points i Panel
-   // public int f=1;
-    ArrayList<HiddenObject> hiddenObjects = new ArrayList<>();//listan som inehåller alla gömda obejkt
+    //ArrayList<HiddenObject> hiddenObjects = new ArrayList<>();//listan som inehåller alla gömda obejkt
+    private ArrayList<HiddenObject> hiddenObjects;
+    private Levels  levels = new Levels();
 
 
 
 
-    public Panel(Points myPoints) {
+
+    public Panel(Points myPoints, WrongClicked wrongClicked) {
+
         this.myPoints = myPoints;
         this.addMouseListener(this);
-        this.setBackground(Color.BLACK);
+       // this.setBackground(Color.BLACK);
         this.setSize(1000, 550);//storlek på Panelen
-
-        //getWindow();
-
-        this.setVisible(true);
-
-        hiddenObjects.add(new HiddenObject(582, 433));// Alla gömda föremål och dess kordinater
-        hiddenObjects.add(new HiddenObject(702, 529));
-        hiddenObjects.add(new HiddenObject(763, 156));
-        hiddenObjects.add(new HiddenObject(663, 357));
-        hiddenObjects.add(new HiddenObject(847, 443));
-        hiddenObjects.add(new HiddenObject(907 , 363));
+        this.hiddenObjects = new ArrayList<>();
+       // this.hiddenObjects = levels.getHiddenObjects();
+            pickLevel();
+        this.wrongClicked = wrongClicked;
 
         myPoints.objTotal = hiddenObjects.size();//antalet objekt
         myPoints.objLeft = myPoints.objTotal;
 
 
     }
+ public void pickLevel(){
 
-    /*private Window getWindow() {
-        if (f == 1){
-            getWindow().lvlCleard = true;
+         this.hiddenObjects = levels.getHiddenObjects();
 
-        }
-        return getWindow();
+
+
+         this.hiddenObjects = levels.getHiddenObjects2();
+
+
+
+
+ }
+
+    /*public void setLevels(Levels levels) {
+        this.levels = levels;
     }*/
-
     protected void paintComponent(Graphics g) {
+        //Levels.pic() ;
         super.paintComponent(g);
-        BufferedImage image;
+        //BufferedImage image;
+
         try {
-            image = ImageIO.read(new File(myImage.getFilename()));// läser in bilden
-            g.drawImage(image, 0, 0, 500    , 550, this);//Ritat ut bilden
+            if(Levels.whichLevel== 1) {
+                BufferedImage image = ImageIO.read(new File(Levels.myImage.getFilename()));
+                g.drawImage(image, 0, 0, 1000, 550, this);//Ritat ut bilden
+                repaint();
+            }else if (Levels.whichLevel == 2){
+                BufferedImage image = ImageIO.read(new File(Levels.myImage2.getFilename()));
+                g.drawImage(image, 0, 0, 1000, 550, this);//Ritat ut bilden
+                repaint();
+            }
         } catch (IOException e) {
             System.out.println("error");// ifall det inte går att rita ut bilden
         }
@@ -74,6 +85,7 @@ public class Panel extends JPanel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        wrongClicked.ClickMinus();
         boolean foundObject = false;
         for (HiddenObject obj : hiddenObjects) {// kontrolerar ifall musen klickar inom korrdinaterna av lådan till ett gömt objekt, både på vänstra och höger bild
             if (obj.xPos - obj.getWidth() / 2 < e.getX() &&
@@ -97,8 +109,8 @@ public class Panel extends JPanel implements MouseListener {
 
 
         }
-        if(myPoints.objLeft == 5){
-            Window.setAwesome(true);
+        if(myPoints.objLeft == 1){
+            wrongClicked.window.setAwesome(true);
         }
         //System.out.println(e.getX() + " , " + e.getY());// skriver ut koordinaterna
         this.revalidate();//förnyar

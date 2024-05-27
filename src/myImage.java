@@ -5,7 +5,10 @@ public class myImage {//lagar ett filnamn
         this.filename = filename;
     }
 
+
+
     public String getFilename() {
         return filename;
     }
+
 }

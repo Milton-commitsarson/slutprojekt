@@ -18,7 +18,8 @@ public class Clock extends JPanel implements ActionListener {
 
     protected void paintComponent(Graphics g) {//Ritar ut allting
         super.paintComponent(g);
-        setBackground(Color.yellow);//bakrundsfärg
+        setBackground(Color.lightGray);//bakrundsfärg
+        g.setColor(Color.black);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 20)); // font och storlek
         //return Points(objTotal)
         if (seconds > 9) {// gör så att det är en nolla framför sekund räknaren tills att det har gått 10 sekunder

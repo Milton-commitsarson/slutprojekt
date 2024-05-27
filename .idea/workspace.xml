@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0fe8162-b548-4de3-9434-544f2169b5a4" name="Changes" comment="Final commit, VI borde fått en till lektion för du sa så!!!!!!!">
-      <change afterPath="$PROJECT_DIR$/beach-7732259_1280.jpg" afterDir="false" />
+    <list default="true" id="c0fe8162-b548-4de3-9434-544f2169b5a4" name="Changes" comment="tilllägg inte klar">
+      <change afterPath="$PROJECT_DIR$/Level2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Level1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Level1Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LevelButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Levels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WrongClicked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HiddenObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HiddenObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Points.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Points.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Win.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/myImage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/milton.molanderrybe/Downloads/Programmering2/slutprojekt&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/milton.molanderrybe/Desktop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\milton.molanderrybe\Downloads\Programmering2\slutprojekt" />
@@ -106,7 +115,9 @@
       <workItem from="1714677316325" duration="20323000" />
       <workItem from="1715283275956" duration="5108000" />
       <workItem from="1715938121717" duration="7601000" />
-      <workItem from="1716054419499" duration="2239000" />
+      <workItem from="1716054419499" duration="6765000" />
+      <workItem from="1716281914073" duration="32004000" />
+      <workItem from="1716454864344" duration="43262000" />
     </task>
     <task id="LOCAL-00001" summary="commit 3?">
       <option name="closed" value="true" />
@@ -148,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714338088365</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tilllägg inte klar">
+      <option name="closed" value="true" />
+      <created>1716056738291</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716056738291</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +179,18 @@
     <MESSAGE value="commit 5" />
     <MESSAGE value="commit 5,1" />
     <MESSAGE value="Final commit, VI borde fått en till lektion för du sa så!!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final commit, VI borde fått en till lektion för du sa så!!!!!!!" />
+    <MESSAGE value="tilllägg inte klar" />
+    <option name="LAST_COMMIT_MESSAGE" value="tilllägg inte klar" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Window.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
